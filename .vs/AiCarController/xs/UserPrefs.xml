@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{2B95398B-8789-0860-4538-A0786BE05A73}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarController.cs">
+    <Files>
+      <File FileName="Assets/Scripts/CarController.cs" Line="155" Column="1" NotebookId="1" />
+      <File FileName="Assets/Credits.txt" Line="4" Column="38" NotebookId="1" />
+      <File FileName="Assets/PlayerCarInput.cs" Line="39" Column="1" NotebookId="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="71c1cd43-762d-4a3d-b572-75a1866e68bc" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/panagiotisnanousis/Documents/GitHub/AiCarController/Assets/Scripts/CameraController.cs" relfile="Assets/Scripts/CameraController.cs" line="8" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
