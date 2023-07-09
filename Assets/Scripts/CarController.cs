@@ -28,10 +28,7 @@ public class CarController : MonoBehaviour
     public float maxSpeed;
     public AnimationCurve steeringCurve;
 
-    public Mybutton gasPedal;
-    public Mybutton brakePedal;
-    public Mybutton leftButton;
-    public Mybutton rightButton;
+
     public int isEngineRunning;
 
     public float RPM;
@@ -116,28 +113,14 @@ public class CarController : MonoBehaviour
     public void SetInput(float throttleIn, float steeringIn, float clutchIn, float handbrakeIn)
     {
         gasInput = throttleIn;
-        //if (gasPedal.isPressed)
-        //{
-        //    gasInput += gasPedal.dampenPress;
-        //}
-        //if (brakePedal.isPressed)
-        //{
-        //    gasInput -= brakePedal.dampenPress;
-        //}
+
         if (Mathf.Abs(gasInput) > 0 && isEngineRunning == 0)
         {
             StartCoroutine(GetComponent<EngineAudio>().StartEngine());
             gearState = GearState.Running;
         }
         steeringInput = steeringIn;
-        if (rightButton.isPressed)
-        {
-            steeringInput += rightButton.dampenPress;
-        }
-        if (leftButton.isPressed)
-        {
-            steeringInput -= leftButton.dampenPress;
-        }
+
         slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
         //fixed code to brake even after going on reverse by Andrew Alex 

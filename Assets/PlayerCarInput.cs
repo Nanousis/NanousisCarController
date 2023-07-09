@@ -5,16 +5,20 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(CarController))]
 public class PlayerCarInput : MonoBehaviour
 {
-    public CarInput input;
-    public float throttleInput;
-    public float throttleDamp;
-    public float steeringInput;
-    public float steeringDamp;
-    public float clutchInput;
-    public float clutchDamp;
-    public float handBrakeInput;
+    private CarInput input;
+    private float throttleInput;
+    private float throttleDamp;
+    private float steeringInput;
+    private float steeringDamp;
+    private float clutchInput;
+    private float clutchDamp;
+    private float handBrakeInput;
     private CarController carController;
     public float dampenSpeed=1;
+    public Mybutton gasPedal;
+    public Mybutton brakePedal;
+    public Mybutton leftButton;
+    public Mybutton rightButton;
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,7 +37,25 @@ public class PlayerCarInput : MonoBehaviour
         input.Car.Handbrake.performed += ApplyHandbrake;
         input.Car.Handbrake.canceled += ReleaseHandbrake;
     }
-
+    private void HandleUI()
+    {
+        if (gasPedal.isPressed)
+        {
+            throttleInput += gasPedal.dampenPress;
+        }
+        if (brakePedal.isPressed)
+        {
+            throttleInput -= brakePedal.dampenPress;
+        }
+        if (rightButton.isPressed)
+        {
+            steeringInput += rightButton.dampenPress;
+        }
+        if (leftButton.isPressed)
+        {
+            steeringInput -= leftButton.dampenPress;
+        }
+    }
     private void Update()
     {
         throttleDamp = DampenedInput(throttleInput, throttleDamp);
