@@ -1,14 +1,20 @@
 ﻿<Properties StartupConfiguration="{1C794FFA-C009-F9D2-105D-7C240001AB4E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerCarInput.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/AiCarController.cs">
     <Files>
-      <File FileName="Assets/Scripts/CarController.cs" Line="31" Column="1" />
-      <File FileName="Assets/Scripts/EngineAudio.cs" Line="22" Column="38" />
-      <File FileName="Assets/PlayerCarInput.cs" Line="9" Column="12" />
+      <File FileName="Assets/Scripts/CarController.cs" Line="257" Column="115" />
+      <File FileName="Assets/Scripts/EngineAudio.cs" Line="69" Column="1" />
+      <File FileName="Assets/PlayerCarInput.cs" Line="67" Column="31" />
+      <File FileName="Assets/Waypoints.cs" Line="9" Column="15" />
+      <File FileName="Assets/aicontroller.cs" Line="26" Column="49" />
+      <File FileName="Assets/brakeZone.cs" Line="21" Column="40" />
+      <File FileName="Assets/WaypointContainer.cs" Line="15" Column="40" />
+      <File FileName="Assets/AiCarController.cs" Line="18" Column="23" />
+      <File FileName="Assets/BrakingZone.cs" Line="18" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="65b17a69-09d3-44d4-baf3-1b328e1e82b5" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="046341b0-4572-4d18-87c1-525723c045c0" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -26,7 +26,7 @@ public class CarController : MonoBehaviour
     public float speed;
     private float speedClamped;
     public float maxSpeed;
-    public AnimationCurve steeringCurve;
+    public float maxSteering=70f;
 
 
     public int isEngineRunning;
@@ -103,7 +103,7 @@ public class CarController : MonoBehaviour
         speed = colliders.RRWheel.rpm*colliders.RRWheel.radius*2f*Mathf.PI /10f;
         speedClamped = Mathf.Lerp(speedClamped, speed, Time.deltaTime);
         ApplyMotor();
-        ApplySteering();
+        //ApplySteering();
         ApplyBrake();
         CheckParticles();
         ApplyWheelPositions();
@@ -119,7 +119,7 @@ public class CarController : MonoBehaviour
             StartCoroutine(GetComponent<EngineAudio>().StartEngine());
             gearState = GearState.Running;
         }
-        steeringInput = steeringIn;
+        ApplySteering(steeringIn);
 
         slipAngle = Vector3.Angle(transform.forward, playerRB.velocity - transform.forward);
 
@@ -248,15 +248,15 @@ public class CarController : MonoBehaviour
         return torque;
     }
 
-    void ApplySteering()
+    public void ApplySteering(float steeringAngle)
     {
 
-        float steeringAngle = steeringInput*steeringCurve.Evaluate(speed);
+        //float steeringAngle = steeringInput*steeringCurve.Evaluate(speed);
         if (slipAngle < 120f)
         {
             steeringAngle += Vector3.SignedAngle(transform.forward, playerRB.velocity + transform.forward, Vector3.up);
         }
-        steeringAngle = Mathf.Clamp(steeringAngle, -90f, 90f);
+        steeringAngle = Mathf.Clamp(steeringAngle, -maxSteering, maxSteering);
         colliders.FRWheel.steerAngle = steeringAngle;
         colliders.FLWheel.steerAngle = steeringAngle;
     }

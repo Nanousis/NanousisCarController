@@ -19,6 +19,8 @@ public class PlayerCarInput : MonoBehaviour
     public Mybutton brakePedal;
     public Mybutton leftButton;
     public Mybutton rightButton;
+    public AnimationCurve steeringCurve;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -58,10 +60,12 @@ public class PlayerCarInput : MonoBehaviour
     }
     private void Update()
     {
+        HandleUI();
         throttleDamp = DampenedInput(throttleInput, throttleDamp);
         steeringDamp = DampenedInput(steeringInput, steeringDamp);
         clutchDamp = DampenedInput(clutchInput, clutchDamp);
-        carController.SetInput(throttleDamp, steeringDamp, clutchDamp, handBrakeInput);
+        carController.SetInput(throttleDamp, steeringDamp * steeringCurve.Evaluate(carController.speed), clutchDamp, handBrakeInput);
+
     }
 
     private void OnDisable()
