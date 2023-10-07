@@ -41,19 +41,19 @@ public class PlayerCarInput : MonoBehaviour
     }
     private void HandleUI()
     {
-        if (gasPedal.isPressed)
+        if (gasPedal!=null&& gasPedal.isPressed)
         {
             throttleInput += gasPedal.dampenPress;
         }
-        if (brakePedal.isPressed)
+        if (brakePedal != null&&brakePedal.isPressed)
         {
             throttleInput -= brakePedal.dampenPress;
         }
-        if (rightButton.isPressed)
+        if (rightButton != null && rightButton.isPressed)
         {
             steeringInput += rightButton.dampenPress;
         }
-        if (leftButton.isPressed)
+        if (leftButton != null && leftButton.isPressed)
         {
             steeringInput -= leftButton.dampenPress;
         }

@@ -97,8 +97,11 @@ public class CarController : MonoBehaviour
 
     void Update()
     {
+        if(rpmNeedle)
         rpmNeedle.rotation = Quaternion.Euler(0, 0, Mathf.Lerp(minNeedleRotation, maxNeedleRotation, RPM / (redLine*1.1f)));
+        if(rpmText)
         rpmText.text = RPM.ToString("0,000")+"rpm";
+        if(gearText)
         gearText.text = (gearState==GearState.Neutral)?"N":(currentGear + 1).ToString();
         speed = colliders.RRWheel.rpm*colliders.RRWheel.radius*2f*Mathf.PI /10f;
         speedClamped = Mathf.Lerp(speedClamped, speed, Time.deltaTime);
