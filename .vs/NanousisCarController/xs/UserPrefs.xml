@@ -1,22 +1,22 @@
 ﻿<Properties StartupConfiguration="{1C794FFA-C009-F9D2-105D-7C240001AB4E}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PartsManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/CarInput.cs">
     <Files>
-      <File FileName="Assets/GarageCamera.cs" Line="82" Column="65" />
+      <File FileName="Assets/GarageCamera.cs" Line="21" Column="11" />
       <File FileName="Assets/Scripts/CarController.cs" />
       <File FileName="Assets/Scripts/EngineAudio.cs" />
       <File FileName="Assets/PlayerCarInput.cs" />
       <File FileName="Assets/WaypointContainer.cs" />
       <File FileName="Assets/AiCarController.cs" />
       <File FileName="Assets/BrakingZone.cs" />
-      <File FileName="Assets/PartsUIManager.cs" Line="42" Column="14" />
-      <File FileName="Assets/PartsGear.cs" Line="21" Column="1" />
-      <File FileName="Assets/PartsManagerUI.cs" Line="10" Column="1" />
-      <File FileName="Assets/PartsManager.cs" Line="17" Column="6" />
+      <File FileName="Assets/PartsGear.cs" />
+      <File FileName="Assets/PartsManagerUI.cs" />
+      <File FileName="Assets/PartsManager.cs" Line="35" Column="26" />
+      <File FileName="Assets/Scripts/CarInput.cs" Line="343" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="2fcdd772-5c65-4064-87db-b6aa95f6cbdd" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eed963c5-d7cd-40bd-99b0-e61da9dd6397" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

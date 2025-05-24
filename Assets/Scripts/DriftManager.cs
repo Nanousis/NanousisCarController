@@ -43,8 +43,8 @@ public class DriftManager : MonoBehaviour
     }
     void ManageDrift()
     {
-        speed = playerRB.velocity.magnitude;
-        driftAngle = Vector3.Angle(playerRB.transform.forward, (playerRB.velocity + playerRB.transform.forward).normalized);
+        speed = playerRB.linearVelocity.magnitude;
+        driftAngle = Vector3.Angle(playerRB.transform.forward, (playerRB.linearVelocity + playerRB.transform.forward).normalized);
         if (driftAngle > 120)
         {
             driftAngle = 0;

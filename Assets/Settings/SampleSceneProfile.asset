@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: Bloom
   m_EditorClassIdentifier: 
   active: 1
+  skipIterations:
+    m_OverrideState: 0
+    m_Value: 1
   threshold:
     m_OverrideState: 1
     m_Value: 1
@@ -31,9 +34,12 @@ MonoBehaviour:
   highQualityFiltering:
     m_OverrideState: 0
     m_Value: 0
-  skipIterations:
+  downscale:
     m_OverrideState: 0
-    m_Value: 1
+    m_Value: 0
+  maxIterations:
+    m_OverrideState: 0
+    m_Value: 6
   dirtTexture:
     m_OverrideState: 1
     m_Value: {fileID: 2800000, guid: 8881238a895b44627bfb90878e3598d2, type: 3}
@@ -53,19 +59,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   quality:
     m_OverrideState: 1
     m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.554
   clamp:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.1792
 --- !u!114 &-7011558710299706105
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -178,11 +184,11 @@ MonoBehaviour:
   components:
   - {fileID: -7893295128165547882}
   - {fileID: -7011558710299706105}
-  - {fileID: -7881140512765176508}
   - {fileID: 1646341921650510534}
   - {fileID: -3844872411011916546}
   - {fileID: -1649986273186208954}
   - {fileID: -3012159552346233786}
+  - {fileID: -7881140512765176508}
 --- !u!114 &1646341921650510534
 MonoBehaviour:
   m_ObjectHideFlags: 3
